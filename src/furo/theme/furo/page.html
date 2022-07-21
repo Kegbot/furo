@@ -136,6 +136,8 @@
               {%- endif %}
             </div>
             {%- endif %}
+            {% block footer_credits %}
+            {%- if show_footer_credits -%}
             {% trans %}Made with {% endtrans -%}
             {%- if show_sphinx -%}
             {% trans %}<a href="https://www.sphinx-doc.org/">Sphinx</a> and {% endtrans -%}
@@ -144,6 +146,8 @@
             {% trans %}
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             {% endtrans %}
+            {%- endif %}
+            {% endblock footer_credits %}
             {%- if last_updated -%}
             <div class="last-updated">
               {% trans last_updated=last_updated|e -%}
